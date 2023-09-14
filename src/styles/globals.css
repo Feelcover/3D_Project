@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap");
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -7,5 +11,6 @@
 }
 
 body {
-  font-family: 'Kanit', sans-serif;
+  @apply text-white bg-[#09131B];
+  font-family: "Kanit", sans-serif;
 }
