@@ -20,7 +20,7 @@ const CarouselItem: FC<{ item: ICarouselItem }> = ({ item }) => {
       {isActive && (
         <div
           className={cn(
-            "w-1/2 mx-auto mt-10 bg-[#5DB7EE] h-2 rounded transition-all duration-300 ease-in-out",
+            "w-1/2 mx-auto mt-10 bg-aqua h-2 rounded transition-all duration-300 ease-in-out",
             isActive ? "w-1/2" : "w-0"
           )}
         ></div>
