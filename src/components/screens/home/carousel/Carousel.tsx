@@ -6,7 +6,7 @@ const Carousel: FC = () => {
   const { items } = useCarousel();
 
   return (
-    <div className="mt-10">
+    <div className="mt-14 flex items-center">
       {items.length ? (
         items.map((item) => <CarouselItem key={item.id} item={item} />)
       ) : (
