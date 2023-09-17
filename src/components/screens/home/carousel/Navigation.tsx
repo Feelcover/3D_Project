@@ -5,7 +5,7 @@ import { BsChevronDoubleRight, BsChevronDoubleLeft } from "react-icons/bs";
 const Navigation: FC = () => {
   const { nextSlide, prevSlide } = useActions();
   return (
-    <div className="mt-10 w-1/2 flex items-center">
+    <div className="mt-10 w-1/2 flex items-center justify-center mx-auto">
       <button
         onClick={() => prevSlide()}
         className="mr-14 transition-colors duration-300 hover:text-aqua"

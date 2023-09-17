@@ -9,7 +9,7 @@ const CarouselItem: FC<{ item: ICarouselItem }> = ({ item }) => {
   const isActive = currentId === item.id;
 
   return (
-    <div className={cn("mx-14", currentId === item.id ? "w-1/2" : "w-1/4")}>
+    <div className={cn("mx-14", isActive ? "w-1/2" : "w-1/4")}>
       <Image
         className="rounded-x1 shadow-lg overflow-hidden"
         src={item.image}
@@ -17,14 +17,12 @@ const CarouselItem: FC<{ item: ICarouselItem }> = ({ item }) => {
         width={700}
         height={394}
       />
-      {isActive && (
-        <div
-          className={cn(
-            "w-1/2 mx-auto mt-10 bg-aqua h-2 rounded transition-all duration-300 ease-in-out",
-            isActive ? "w-1/2" : "w-0"
-          )}
-        ></div>
-      )}
+      <div
+        className={cn(
+          "mx-auto mt-10 bg-aqua h-2 rounded transition-all duration-300 ease-in-out",
+          isActive ? "w-1/2" : "w-0"
+        )}
+      />
     </div>
   );
 };
