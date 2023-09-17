@@ -7,10 +7,12 @@ const Navigation: FC = () => {
   return (
     <div>
       <button onClick={() => prevSlide()}>
-        <BsChevronDoubleRight />
+      <BsChevronDoubleLeft />
+
       </button>
       <button onClick={() => nextSlide()}>
-        <BsChevronDoubleLeft />
+        <BsChevronDoubleRight />
+
       </button>
     </div>
   );
