@@ -8,13 +8,13 @@ const Navigation: FC = () => {
     <div className="mt-10 w-1/2 flex items-center justify-center mx-auto">
       <button
         onClick={() => prevSlide()}
-        className="mr-14 transition-colors duration-300 hover:text-aqua"
+        className="mr-14 transition-colors duration-500 hover:text-aqua"
       >
         <BsChevronDoubleLeft size={40} />
       </button>
       <button
         onClick={() => nextSlide()}
-        className="transition-colors duration-300 hover:text-aqua"
+        className="transition-colors duration-500 hover:text-aqua"
       >
         <BsChevronDoubleRight size={40} />
       </button>

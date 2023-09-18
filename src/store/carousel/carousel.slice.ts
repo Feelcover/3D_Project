@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ICarouselInitialState } from "./carousel.interface";
 import { items } from "./items.data";
 
@@ -32,6 +32,9 @@ export const carouselSlice = createSlice({
       }
 
       state.currentId = prevId;
+    },
+    changeCurrentId: (state, action: PayloadAction<number>) => {
+      state.currentId = action.payload
     },
   },
 });
