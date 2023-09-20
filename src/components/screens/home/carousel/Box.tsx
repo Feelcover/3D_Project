@@ -1,7 +1,7 @@
-import { useFrame } from "@react-three/fiber";
+import { ThreeElements, useFrame } from "@react-three/fiber";
 import React, { FC, useRef, useState } from "react";
 
-const Box: FC = (props) => {
+const Box: FC<ThreeElements["mesh"]> = (props) => {
   const ref = useRef<THREE.Mesh>(null!);
   const [hovered, hover] = useState(false);
   const [clicked, click] = useState(false);
