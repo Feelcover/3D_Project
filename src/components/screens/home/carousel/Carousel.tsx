@@ -8,16 +8,15 @@ const Carousel: FC = () => {
 
   return (
     <section className="mt-14">
-    <div className="flex items-center">
-      {items.length ? (
-        items.map((item) => <CarouselItem key={item.id} item={item} />)
-      ) : (
-        <div>Элементы не найдены</div>
-      )}
-    </div>
-      <Navigation/>
-      </section>
-
+      <div className="flex items-center">
+        {items.length ? (
+          items.map((item) => <CarouselItem key={item.id} item={item} />)
+        ) : (
+          <div>Элементы не найдены</div>
+        )}
+      </div>
+      <Navigation />
+    </section>
   );
 };
 

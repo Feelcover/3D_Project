@@ -5,13 +5,13 @@ const Box: FC<ThreeElements["mesh"]> = (props) => {
   const ref = useRef<THREE.Mesh>(null!);
   const [hovered, hover] = useState(false);
   const [clicked, click] = useState(false);
-  useFrame((state, delta) => (ref.current.rotation.x += delta));
+  useFrame((state, delta) => (ref.current.rotation.y += delta));
 
   return (
     <mesh
       {...props}
       ref={ref}
-      scale={clicked ? 1.5 : 1}
+      scale={clicked ? 1.5 : 3}
       onClick={(event) => click(!clicked)}
       onPointerOver={(event) => hover(true)}
       onPointerOut={(event) => hover(false)}
