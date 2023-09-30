@@ -1,17 +1,14 @@
-import { Canvas } from '@react-three/fiber'
-import React from 'react'
-import Box from './Box'
+import { Canvas } from "@react-three/fiber";
+import React, { PropsWithChildren } from "react";
 
-
-const Three = () => {
+const ThreeProvider: React.FC<PropsWithChildren<unknown>> = ({ children }) => {
   return (
     <Canvas>
-    <ambientLight />
-    <pointLight position={[10, 10, 10]} />
-    <Box position={[-3, 0, 0]} />
-    <Box position={[3, 0, 0]} />
-  </Canvas>
-  )
-}
+      <ambientLight />
+      <pointLight position={[10, 10, 10]} />
+      {children}
+    </Canvas>
+  );
+};
 
-export default Three
+export default ThreeProvider;
