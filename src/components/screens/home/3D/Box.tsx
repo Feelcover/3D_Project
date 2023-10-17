@@ -25,6 +25,7 @@ const Box: FC<TypeBox> = ({ item, ...rest }) => {
     <mesh
       {...rest}
       ref={ref}
+      scale={3}
       onClick={() => changeCurrentId(item.id)}
     >
       <boxGeometry args={[1.5, 1.5, 1.5]} />

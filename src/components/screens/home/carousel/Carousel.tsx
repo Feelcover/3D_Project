@@ -9,7 +9,7 @@ const Carousel: FC = () => {
 
   return (
     <section className="mt-14">
-      <div className="flex items-center">
+      <div className="flex items-center justify-between">
         {items.length ? (
           items.map((item) => <Carousel3DItem key={item.id} item={item} />)
         ) : (
