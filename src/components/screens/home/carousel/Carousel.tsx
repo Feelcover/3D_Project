@@ -1,6 +1,6 @@
 import { useCarousel } from "@/hooks/useCarousel";
 import React, { FC } from "react";
-import Carousel3DItem from "./Carousel3DItem";
+import Carousel3DItem from "../3D/Carousel3DItem";
 import CarouselItem from "./CarouselItem";
 import Navigation from "./Navigation";
 

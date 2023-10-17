@@ -23,7 +23,7 @@ const Carousel3DItem: FC<{ item: ICarouselItem }> = ({ item }) => {
           height={394}
         /> */}
         <ThreeProvider>
-          <Box position={[0, 0, 0]} />
+          <Box position={[0, 0, 0]} image={item.image}/>
         </ThreeProvider>
       </button>
       <div

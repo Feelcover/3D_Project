@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import Carousel from "./carousel/Carousel";
-import ThreeProvider from "./carousel/Three";
+import ThreeProvider from "./3D/Three";
 
 const Home: FC = () => {
   return (
