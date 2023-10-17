@@ -14,18 +14,9 @@ const Carousel3DItem: FC<{ item: ICarouselItem }> = ({ item }) => {
 
   return (
     <div className={cn("mx-14", isActive ? "w-1/2" : "w-1/4")}>
-      <button onClick={() => changeCurrentId(item.id)}>
-        {/* <Image
-          className="rounded-x1 shadow-lg overflow-hidden"
-          src={item.image}
-          alt=""
-          width={700}
-          height={394}
-        /> */}
         <ThreeProvider>
-          <Box position={[0, 0, 0]} image={item.image}/>
+          <Box position={[0, 0, 0]} item={item}/>
         </ThreeProvider>
-      </button>
       <div
         className={cn(
           "mx-auto mt-10 bg-aqua h-2 rounded transition-all duration-500 ease-in-out",

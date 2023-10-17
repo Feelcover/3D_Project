@@ -1,30 +1,34 @@
+import useActions from "@/hooks/useActions";
+import { ICarouselItem } from "@/store/carousel/carousel.interface";
 import { useTexture } from "@react-three/drei";
 import { ThreeElements, useFrame } from "@react-three/fiber";
 import React, { FC, useRef, useState } from "react";
+import * as THREE from "three";
 
 type TypeBox = {
-  image: string
-} & ThreeElements["mesh"]
+  item: ICarouselItem;
+} & ThreeElements["mesh"];
 
-const Box: FC<TypeBox> = (props) => {
+const Box: FC<TypeBox> = ({ item, ...rest }) => {
   const ref = useRef<THREE.Mesh>(null!);
-  const [hovered, hover] = useState(false);
-  const [clicked, click] = useState(false);
-  useFrame((state, delta) => (ref.current.rotation.y += delta));
+  const image = useTexture(item.image);
 
-  const image = useTexture(props.image)
+  useFrame((state, delta) => {
+    if (ref.current) {
+      ref.current.rotation.x += delta / 2;
+      ref.current.rotation.y += delta;
+    }
+  });
 
+  const { changeCurrentId } = useActions();
   return (
     <mesh
-      {...props}
+      {...rest}
       ref={ref}
-      scale={clicked ? 1.5 : 3}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}
+      onClick={() => changeCurrentId(item.id)}
     >
       <boxGeometry args={[1.5, 1.5, 1.5]} />
-      <meshBasicMaterial map={image}/>
+      <meshBasicMaterial map={image} side={THREE.FrontSide} />
     </mesh>
   );
 };
