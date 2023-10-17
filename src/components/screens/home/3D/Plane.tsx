@@ -1,4 +1,4 @@
-import { FC, forwardRef } from "react";
+import { FC, forwardRef, useRef } from "react";
 
 interface IPlane {
   shift?: number;
@@ -7,7 +7,8 @@ interface IPlane {
   map: any;
 }
 
-const Plane: FC<IPlane> = forwardRef(() => {
+const Plane: FC<IPlane> = forwardRef(({args, map, opacity, shift}, ref) => {
+    const material = useRef()
   return <div>Plane</div>;
 });
 
