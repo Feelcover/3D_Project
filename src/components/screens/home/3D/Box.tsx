@@ -28,7 +28,7 @@ const Box: FC<TypeBox> = ({ item, ...rest }) => {
       scale={3}
       onClick={() => changeCurrentId(item.id)}
     >
-      <boxGeometry args={[1.5, 1.5, 1.5]} />
+      <boxGeometry args={[1, 1, 1]} />
       <meshBasicMaterial map={image} side={THREE.FrontSide} />
     </mesh>
   );
