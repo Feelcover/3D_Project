@@ -5,7 +5,7 @@ import ThreeProvider from "./3D/Three";
 const Home: FC = () => {
   return (
     <div className="m-16">
-      <h1 className="text-7xl text-center font-medium">Portfolio</h1>
+      <h1 className="text-7xl text-center font-medium">ThreeJS</h1>
       <Carousel />
       <ThreeProvider/>
     </div>
